@@ -21,12 +21,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         initView();
 
-        resultButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                resultTextView.setText(getSumFromView());
-            }
-        });
+        resultButton.setOnClickListener(view -> resultTextView.setText(getSumFromView()));
     }
 
     private String getSumFromView() {
@@ -55,5 +50,4 @@ public class MainActivity extends AppCompatActivity {
         resultButton = findViewById(R.id.result_button);
         resultTextView = findViewById(R.id.result_text_view);
     }
-
 }
